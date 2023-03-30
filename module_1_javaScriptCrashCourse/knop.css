@@ -1,5 +1,6 @@
 body {
   background-color: lightblue;
+  font-family: "Top Secret Stamp";
 }
 button {
   background-color: blue;
@@ -9,4 +10,8 @@ button {
 }
 button:hover {
   background-color: red;
+}
+@font-face {
+  font-family: "Top Secret Stamp";
+  src: url("top_secret_stamp/Top-Secret-Stamp.ttf");
 }

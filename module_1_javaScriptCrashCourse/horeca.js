@@ -35,9 +35,9 @@ while (doorBestellen){ // nietfalse naar doorbestellen  DONE
 
 
 const bestellingClone = aantal.slice() // line 17 t/m 22 buiten de while    DONE
-        aantal[0] = aantal[0] * prijs_fris // aparte array aanmaken 
-        aantal[1] = aantal[1] * prijs_bier // if statement gebruiken om vervolgens te controleren of het aantal groter is dan 0
-        aantal[2] = aantal[2] * prijs_wijn // for (drank of dranken) {console }
+        prijzen[0] = aantal[0] * prijs_fris // aparte array aanmaken 
+        prijzen[1] = aantal[1] * prijs_bier // if statement gebruiken om vervolgens te controleren of het aantal groter is dan 0
+        prijzen[2] = aantal[2] * prijs_wijn // for (drank of dranken) {console }
         console.log(aantal)
         console.log({bestellingClone})
 
