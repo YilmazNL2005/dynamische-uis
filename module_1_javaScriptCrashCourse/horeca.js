@@ -12,8 +12,8 @@ const gevraagde_product = ["", "", ""]
 while (doorBestellen){ // nietfalse naar doorbestellen  DONE
     while (true)
         {let bestellen = prompt("Wat wilt u bestellen? Keuze: fris, bier of wijn. Of liever stoppen? type: stop ") //.toLocaleLowerCase
-        if (bestellen.includes("fris") || bestellen.includes("bier") || bestellen.includes("wijn") || bestellen.includes("stop"))   
-            break;
+            if (bestellen.includes("fris") || bestellen.includes("bier") || bestellen.includes("wijn") || bestellen.includes("stop"))   
+                break;
         // if (bestellen != "fris" && bestellen != "bier" && bestellen != "wijn" && bestellen != "stop"){
         }
     if (bestellen === "stop"){
