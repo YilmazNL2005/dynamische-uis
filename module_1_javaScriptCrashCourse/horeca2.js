@@ -44,6 +44,12 @@ while (doorBestellen){ // fris, bier of wijn. Anders stoppen typ stop.
                     }
 
 //  fris
-if (aantal[0] > 0){
-    
-}
+//if (aantal[0] > 0){  
+//}
+
+prijzen[0] += prijs_fris * aantal[0];
+prijzen[1] += prijs_bier * aantal[1];
+prijzen[2] += prijs_wijn * aantal[2];
+console.log(prijzen)
+
+document.getElementById("frissie").innerHTML = "hello";
