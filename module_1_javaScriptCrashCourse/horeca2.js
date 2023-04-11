@@ -46,8 +46,12 @@ while (doorBestellen){ // fris, bier of wijn. Anders stoppen typ stop.
 prijzen[0] += prijs_fris * aantal[0];
 prijzen[1] += prijs_bier * aantal[1];
 prijzen[2] += prijs_wijn * aantal[2];
+let afronding_fris = prijzen[0].toFixed(2);
+let afronding_bier = prijzen[1].toFixed(2);
+let afronding_wijn = prijzen[2].toFixed(2);
 console.log(prijzen)
-
+// let num = 5.56789;
+// let n = num.toFixed(2);
 if ("fris" === gevraagde_product[0]){
 document.write(gevraagde_product[0]+" &nbsp; - &nbsp; Aantal &nbsp; "+ aantal[0] +" &nbsp; - &nbsp; Prijs &nbsp; € " +prijzen[0] + "<br>"); }
 
