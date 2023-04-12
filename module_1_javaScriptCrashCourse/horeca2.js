@@ -11,8 +11,9 @@ let producten = ["fris", "bier", "wijn"]
 
 while (doorBestellen){ // fris, bier of wijn. Anders stoppen typ stop.
     vraag = prompt("Wat wilt u bestellen? of stop? ");
+    let arraycontain = producten.includes(vraag);
         if(vraag === "stop"){doorBestellen = false;}
-        else if (vraag in producten){
+        else if (arraycontain === true){ // if (vraag in producten)
             let vraag_aantal = parseInt(prompt(`Hoeveel wil je van: ${vraag} hebben?: `));
             if (vraag === "fris"){
                 gevraagde_product[0] = vraag;
