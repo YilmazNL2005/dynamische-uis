@@ -1,8 +1,8 @@
 let doorBestellen = true
 let prijs_fris = 2.50
-let prijs_bier = 3.99
+let prijs_bier = 3.99 // prijzen van de producten in een array zetten.
 let prijs_wijn = 3.75
-// for loop gebruiken voor het berekenen  
+// for loop gebruiken voor het berekenen
 
 const prijzen = [0, 0, 0] // fris, bier, wijn
 const aantal = [0, 0, 0] // 0: fris; 1: bier; 2: wijn;
@@ -39,7 +39,7 @@ while (doorBestellen){ // fris, bier of wijn. Anders stoppen typ stop.
         }
                     }
 
-prijzen[0] += prijs_fris * aantal[0];
+prijzen[0] += prijs_fris * aantal[0]; // 42 tot 47 regel. in een for loop
 prijzen[1] += prijs_bier * aantal[1];
 prijzen[2] += prijs_wijn * aantal[2];
 let afronding_fris = prijzen[0].toFixed(2);
