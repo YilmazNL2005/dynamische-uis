@@ -1,10 +1,6 @@
 let doorBestellen = true
-let prijs_fris = 2.50
-let prijs_bier = 3.99 // prijzen van de producten in een array zetten.
-let prijs_wijn = 3.75
-// for loop gebruiken voor het berekenen
-
-const prijzen = [0, 0, 0] // fris, bier, wijn
+const prijzen = [2.50, 3.99, 3,75]
+const kosten = [0, 0, 0] // fris, bier, wijn
 const aantal = [0, 0, 0] // 0: fris; 1: bier; 2: wijn;
 const gevraagde_product = []
 let producten = ["fris", "bier", "wijn"]
@@ -17,37 +13,31 @@ while (doorBestellen){ // fris, bier of wijn. Anders stoppen typ stop.
             let vraag_aantal = parseInt(prompt(`Hoeveel wil je van: ${vraag} hebben?: `));
             if (vraag === "fris"){
                 gevraagde_product[0] = vraag;
-                console.log(gevraagde_product)
                 aantal[0] += vraag_aantal;
-                console.log(aantal)
             }
             if (vraag === "bier"){
                 gevraagde_product[1] = vraag;
-                console.log(gevraagde_product)
                 aantal[1] += vraag_aantal;
-                console.log(aantal)
             }
             if (vraag === "wijn"){
                 gevraagde_product[2] = vraag;
-                console.log(gevraagde_product)
                 aantal[2] += vraag_aantal;
-                console.log(aantal)
             }
         }
         else {
             alert("je moet iets bestellen dat aanwezig is.");
         }
-                    }
+}
 
-prijzen[0] += prijs_fris * aantal[0]; // 42 tot 47 regel. in een for loop
-prijzen[1] += prijs_bier * aantal[1];
-prijzen[2] += prijs_wijn * aantal[2];
-let afronding_fris = prijzen[0].toFixed(2);
-let afronding_bier = prijzen[1].toFixed(2);
-let afronding_wijn = prijzen[2].toFixed(2);
-console.log(prijzen)
+for (let x = 0; x < gevraagde_product.length; x++) {
+    kosten[x] += prijzen[x] * aantal[x]; // 42 tot 47 regel. in een for loop
+};
 
-let totaal_bedrag = prijzen[0] + prijzen[1] + prijzen[2];
+let afronding_fris = kosten[0].toFixed(2);
+let afronding_bier = kosten[1].toFixed(2);
+let afronding_wijn = kosten[2].toFixed(2);
+
+let totaal_bedrag = kosten[0] + kosten[1] + kosten[2];
 let afronding_totaal = totaal_bedrag.toFixed(2);
 
 if ("fris" === gevraagde_product[0]){
@@ -60,3 +50,4 @@ if ("wijn" === gevraagde_product[2]){
 document.write(gevraagde_product[2]+" &nbsp; - &nbsp; Aantal &nbsp; "+ aantal[2] +" &nbsp; - &nbsp; Prijs &nbsp; € " +afronding_wijn + "<br>"); }
 
 document.write("Totaalbedrag : € " + afronding_totaal)
+////////////////////////////////////////////////////////////////////////////////
